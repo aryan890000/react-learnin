@@ -1,35 +1,51 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div style={{ backgroundColor: "#2980b9", height: "100vh", width:"210vh",display: "flex" , justifyContent:"center", alignItems:"center" }}>  {/* Added height: 100vh */}
+      <div style={{ }}>
+        <div>
+          <PostComponent />
+        </div>
+        <br />
+        <div>
+          <PostComponent />
+        </div>
+        <br />
+        <div>
+          <PostComponent />
+        </div>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    </div>
+  );
 }
 
+
+const style = {width:370, backgroundColor : "white  ", borderRadius: 10, borderColor : "gray", borderWidth:1 }
+
+function PostComponent(){
+    return <div style={style}>
+    <div style={{display:"flex"}}>
+        <img src={"https://st2.depositphotos.com/1104517/11965/v/950/depositphotos_119659092-stock-illustration-male-avatar-profile-picture-vector.jpg"} style={{
+          width:100,
+          height:100,
+          borderRadius:200
+        }} />
+
+        <div style={{padding:25}}>
+          <b>
+            100x devs
+          </b>
+          <div>12m followers</div>
+        </div>
+        
+
+    </div>
+    <div style={{padding:5}}>
+      wanna win big enter our hackathon
+    </div>
+    </div>
+
+}
 export default App
